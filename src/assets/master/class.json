@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Standard",
+        "date": "1809",
+        "useGuide": "rigging.json",
+        "shipData": [
+            { 
+                "id": 1,
+                "name": "36 Gun frigate",
+                "exampleName": "HMS Artois",
+                "mainMast": 685.8,
+                "foreMast": 600.075,
+                "mizzenMast": 460.375
+            },
+            { 
+                "id": 2,
+                "name": "60 Gun 4th Rate",
+                "exampleName": "HMS Agammemnon",
+                "mainMast": 700.8,
+                "foreMast": 650.075,
+                "mizzenMast": 500.375
+            }
+        ]
+    }
+]

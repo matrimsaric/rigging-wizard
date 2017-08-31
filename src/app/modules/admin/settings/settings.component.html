@@ -1,0 +1,28 @@
+<div>
+  <md-input-container>
+    <input mdInput #roundFld placeholder="{{'ROUND_TO' | translate: lang}}" style="width:400px" value="{{round}}" disabled="false">
+  </md-input-container><br/>
+  <label>1:</label>
+  <md-input-container>
+  <input mdInput #scaleFld placeholder="{{'SCALE_TO' | translate: lang}}" style="width:400px" value="{{scale}}" disabled="false">
+  </md-input-container><br/>
+  <label translate>SHOW_MEASUREMENT</label>
+  <div>
+      <md-checkbox #mmCheck [checked]="mms" translate>MILLIMETERS</md-checkbox>
+      <md-checkbox #cmCheck [checked]="cms" translate>CENTIMETERS</md-checkbox>
+      <md-checkbox #inCheck [checked]="ins" translate>INCHES</md-checkbox>
+  </div>
+  <label>{{'STANDARD_DATE' | translate: lang}}: {{_globals.classData.date}}</label><br/>
+  <label>{{_globals.classData.shipData[_globals.shipChoice].exampleName}}</label><br/>
+  <md-input-container>
+    <input mdInput #mainMastFld placeholder="{{'MAIN_MAST_DIAM' | translate: lang}}" style="width:400px" value="{{_globals.mainMastDiameter}}" disabled="false">
+  </md-input-container><br/>
+  <md-input-container>
+    <input mdInput #foreMastFld placeholder="{{'FORE_MAST_DIAM' | translate: lang}}" style="width:400px" value="{{_globals.foreMastDiameter}}" disabled="false">
+  </md-input-container><br/>
+  <md-input-container>
+    <input mdInput #mizzenMastFld placeholder="{{'MIZZEN_MAST_DIAM' | translate: lang}}" style="width:400px" value="{{_globals.mizzenMastDiameter}}" disabled="false">
+  </md-input-container><br/>
+  <button class="btn btn-primary btn-small" 
+  (click)="save(roundFld.value, scaleFld.value, mmCheck.checked, cmCheck.checked, inCheck.checked, mainMastFld.value, foreMastFld.value, mizzenmastFld.value)">{{'SAVE' | translate: lang}}</button>
+</div>

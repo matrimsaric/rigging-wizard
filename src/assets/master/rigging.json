@@ -1,0 +1,23 @@
+[
+    { "id": 1, "name": "MAIN_MAST", "workingCalculation": "ACTUAL", "parentReference": 685.8, "resultType": "DIAMETER"},
+    { "id": 2, "name": "FORE_MAST", "workingCalculation": "ACTUAL", "parentReference": 600.075, "resultType": "DIAMETER"},
+    { "id": 3, "name": "MIZZEN_MAST", "workingCalculation": "ACTUAL", "parentReference": 460.375, "resultType": "DIAMETER"},
+    { "id": 35, "name": "MAIN_LOWER_STAY", "workingCalculation": "HALF", "parentReference": 1, "resultType": "DIAMETER"},
+    { "id": 36, "name": "FORE_LOWER_STAY", "workingCalculation": "HALF", "parentReference": 2, "resultType": "DIAMETER"},
+    { "id": 37, "name": "MIZZEN_LOWER_STAY", "workingCalculation": "HALF", "parentReference": 3, "resultType": "DIAMETER"},
+    { "id": 38, "name": "MAIN_TOP_MAST_STAY", "workingCalculation": "HALF", "parentReference": 35, "resultType": "DIAMETER"},
+    { "id": 39, "name": "FORE_TOP_MAST_STAY", "workingCalculation": "HALF", "parentReference": 36, "resultType": "DIAMETER"},
+    { "id": 40, "name": "MIZZEN_TOP_MAST_STAY", "workingCalculation": "HALF", "parentReference": 37, "resultType": "DIAMETER"},
+    { "id": 41, "name": "MAIN_TOP_GALLANT_STAY", "workingCalculation": "HALF", "parentReference": 38, "resultType": "DIAMETER"},
+    { "id": 42, "name": "FORE_TOP_GALLANT_STAY", "workingCalculation": "HALF", "parentReference": 39, "resultType": "DIAMETER"},
+    { "id": 43, "name": "MIZZEN_TOP_GALLANT_STAY", "workingCalculation": "HALF", "parentReference": 40, "resultType": "DIAMETER"},
+    { "id": 44, "name": "MAIN_ROYAL_STAY", "workingCalculation": "HALF", "parentReference": 41, "resultType": "DIAMETER"},
+    { "id": 45, "name": "FORE_ROYAL_STAY", "workingCalculation": "HALF", "parentReference": 42, "resultType": "DIAMETER"},
+    { "id": 46, "name": "MIZZEN_ROYAL_STAY", "workingCalculation": "HALF", "parentReference": 43, "resultType": "DIAMETER"},
+    { "id": 47, "name": "MAIN_LOWER_STAY_COLLAR", "workingCalculation": "PER72", "parentReference": 35, "resultType": "DIAMETER"},
+    { "id": 48, "name": "FORE_LOWER_STAY_COLLAR", "workingCalculation": "PERC50", "parentReference": 36, "resultType": "DIAMETER"},
+    { "id": 49, "name": "MIZZEN_LOWER_STAY_COLLAR", "workingCalculation": "PER80", "parentReference": 37, "resultType": "DIAMETER"},
+    { "id": 50, "name": "MAIN_TOP_MAST_SHROUDS", "workingCalculation": "PERC75", "parentReference": 38, "resultType": "DIAMETER"},
+    { "id": 51, "name": "FORE_TOP_MAST_SHROUDS", "workingCalculation": "PERC80", "parentReference": 39, "resultType": "DIAMETER"},
+    { "id": 52, "name": "MIZZEN_TOP_MAST_SHROUDS", "workingCalculation": "PERC78", "parentReference": 40, "resultType": "DIAMETER"}
+]

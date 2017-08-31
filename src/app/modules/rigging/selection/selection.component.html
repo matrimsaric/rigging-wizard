@@ -1,0 +1,68 @@
+<div *ngIf="ropes">
+  <br/><br/>
+  <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+          <select name="test" (change)="onSelect($event.target.value)" *ngIf="ropes" style="width:300px">
+              <option *ngFor="let rope of ropes" [value]="rope.id">{{rope.name | translate: lang}}</option>
+          </select>
+          <button class="btn btn-primary btn-small" (click)="loadRopeData('erm')">Load</button>
+      </div>
+
+      <div class="col-md-3"></div>
+  </div>
+  <br/>
+  <div *ngIf="ropeData">
+      <div class="row">
+          <div class="col-md-2">{{'ROPE_TYPE' | translate: lang}}</div>
+          <div class="col-md-3">{{'MEASUREMENT' | translate: lang}}</div>
+          <div class="col-md-3">{{'ACTUAL_TO_SIZE' | translate: lang}}</div>
+          <div class="col-md-3">{{'SCALE' | translate: lang}} 1:{{_globals.scaleFactor}}</div>
+          <div class="col-md-1"></div>
+      </div>
+      <div class="row" *ngIf="_globals.showMm">
+          <div class="col-md-2">{{ropeData.name}}</div>
+          <div class="col-md-3">{{'MILLIMETERS' | translate: lang}}</div>
+          <div class="col-md-3">{{ropeData.roundedActualMm}} ({{ropeData.actualMm}}) mm</div>
+          <div class="col-md-3">{{ropeData.roundedScaleMm}} ({{ropeData.scaleMm}}) mm</div>
+          <div class="col-md-1"></div>
+      </div>
+      <div class="row" *ngIf="_globals.showCm">
+          <div class="col-md-2"></div>
+          <div class="col-md-3">{{'CENTIMETERS' | translate: lang}}</div>
+          <div class="col-md-3">{{ropeData.roundedActualCm}} ({{ropeData.actualCm}}) cm</div>
+          <div class="col-md-3">{{ropeData.roundedScaleCm}} ({{ropeData.scaleCm}}) cm</div>
+          <div class="col-md-1"></div>
+      </div>
+      <div class="row" *ngIf="_globals.showInch">
+          <div class="col-md-2"></div>
+          <div class="col-md-3">{{'INCHES' | translate: lang}}</div>
+          <div class="col-md-3">{{ropeData.roundedActualInch}} ({{ropeData.actualInch}}) in</div>
+          <div class="col-md-3">{{ropeData.roundedScaleInch}} ({{ropeData.scaleInch}}) in</div>
+          <div class="col-md-1"></div>
+      </div>
+      <br/>
+      <div class="row" *ngIf="ropeData">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+              <md-tab-group>
+                  <md-tab label="{{'VISUAL' | translate: lang}}">
+                      <p>
+                          <!--<div *ngIf="imageLocation">-->
+                            <img src="{{imageLocation}}"  height="400"/>
+                          <!--</div>   -->
+                      </p>
+                  </md-tab>
+                  <md-tab label="{{'CALCULATION_WORKINGS' | translate: lang}}">
+                      <div *ngFor="let reportLine of extra">
+                          <label>{{reportLine}}</label>
+                      </div>    
+                      <p>...</p>
+                  </md-tab>
+                  
+              </md-tab-group>
+          </div>
+          <div class="col-md-1"></div>
+      </div>
+  </div>
+</div>
